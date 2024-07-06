@@ -1,4 +1,5 @@
 import 'package:ekantipur_clone/controller/for_you_controller.dart';
+import 'package:ekantipur_clone/screen/auth/login_screen.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -149,7 +150,9 @@ class ForYouScreen extends StatelessWidget {
           ),
           const SizedBox(height: 20),
          ElevatedButton(
-  onPressed: () {},
+  onPressed: () {
+    Get.to(()=> LoginScreen()); 
+  },
   style: ElevatedButton.styleFrom(
     backgroundColor: Colors.blue.shade900, 
     minimumSize: const Size(320, 50), 

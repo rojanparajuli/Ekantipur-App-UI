@@ -5,6 +5,8 @@ class ForYouController extends GetxController {
   var selectedIndex = 0.obs;
   final pageController = PageController();
 
+
+
   void onItemTapped(int index) {
     selectedIndex.value = index;
     pageController.jumpToPage(index);
