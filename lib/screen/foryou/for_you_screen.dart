@@ -1,5 +1,6 @@
 import 'package:ekantipur_clone/controller/for_you_controller.dart';
 import 'package:ekantipur_clone/screen/auth/login_screen.dart';
+import 'package:ekantipur_clone/screen/auth/sign_in_screen.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -182,6 +183,7 @@ class ForYouScreen extends StatelessWidget {
           ),
           recognizer: TapGestureRecognizer()
             ..onTap = () {
+              Get.to(()=>  SignInScreen ());
             },
         ),
       ],
