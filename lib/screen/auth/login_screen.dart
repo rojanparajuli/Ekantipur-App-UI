@@ -53,7 +53,8 @@ class LoginScreen extends StatelessWidget {
                     padding: const EdgeInsets.all(8.0),
                     child: GestureDetector(
                       onTap: () {
-Get.to(()=>SignInScreen());                      },
+                        Get.to(() => SignInScreen());
+                      },
                       child: RichText(
                         text: TextSpan(
                           text: "Don't have an account? ",
@@ -247,10 +248,8 @@ Get.to(()=>SignInScreen());                      },
                       borderSide: BorderSide(color: Colors.red),
                     ),
                     contentPadding: const EdgeInsets.symmetric(
-                      vertical:
-                          8.0, 
-                      horizontal:
-                          12.0, 
+                      vertical: 8.0,
+                      horizontal: 12.0,
                     ),
                     suffixIcon: IconButton(
                       icon: Icon(
@@ -291,8 +290,8 @@ Get.to(()=>SignInScreen());                      },
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     GestureDetector(
-                      onTap: (){
-                        Get.to(()=>const ForgetPassword());
+                      onTap: () {
+                        Get.to(() => const ForgetPassword());
                       },
                       child: Text(
                         'Forgot Password ?',
