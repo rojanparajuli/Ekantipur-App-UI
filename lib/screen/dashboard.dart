@@ -1,5 +1,6 @@
 import 'package:ekantipur_clone/controller/dashboard_controller.dart';
 import 'package:ekantipur_clone/screen/drawer/drawer.dart';
+import 'package:ekantipur_clone/screen/foryou/for_you_screen.dart';
 import 'package:ekantipur_clone/screen/latest/latest_screen.dart';
 import 'package:ekantipur_clone/screen/multimedia/multi_medial_screen.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +13,7 @@ class Dashboard extends StatelessWidget {
 
   static  final List<Widget> _widgetOptions = <Widget>[
     const Text('Home Page Content'),
-    const Text('Search Page Content'),
+    ForYouScreen(),
     const Text('Notifications Page Content'),
    LatestNewsScreen(),
     MultimediaScreen(),
