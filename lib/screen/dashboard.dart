@@ -1,5 +1,6 @@
 import 'package:ekantipur_clone/controller/dashboard_controller.dart';
 import 'package:ekantipur_clone/screen/drawer/drawer.dart';
+import 'package:ekantipur_clone/screen/multimedia/multi_medial_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -8,12 +9,12 @@ class Dashboard extends StatelessWidget {
 
   Dashboard({super.key});
 
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text('Home Page Content'),
-    Text('Search Page Content'),
-    Text('Notifications Page Content'),
-    Text('Messages Page Content'),
-    Text('Profile Page Content'),
+  static  final List<Widget> _widgetOptions = <Widget>[
+    const Text('Home Page Content'),
+    const Text('Search Page Content'),
+    const Text('Notifications Page Content'),
+    const Text('Messages Page Content'),
+    MultimediaScreen(),
   ];
 
   @override
@@ -58,24 +59,35 @@ class Dashboard extends StatelessWidget {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: 'Search',
+            icon: Icon(Icons.star),
+            label: 'For You',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.notifications),
-            label: 'Notifications',
+            icon: Icon(Icons.menu_book_sharp),
+            label: 'Shorts',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.message),
-            label: 'Messages',
+            icon: Icon(Icons.watch_later),
+            label: 'Latest',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
+            icon: Icon(Icons.slow_motion_video_outlined),
+            label: 'Multimedia',
           ),
         ],
         currentIndex: controller.selectedIndex.value,
         selectedItemColor: Colors.blue[800],
+        unselectedItemColor: Colors.grey,
+        selectedLabelStyle: TextStyle(
+          color: Colors.blue[800],
+          fontWeight: FontWeight.bold,
+        ),
+        unselectedLabelStyle: TextStyle(
+          color: Colors.grey[700],
+        ),
+        showUnselectedLabels: true,
+        showSelectedLabels: true,
+        type: BottomNavigationBarType.fixed,
         onTap: controller.onItemTapped,
       )),
     );
