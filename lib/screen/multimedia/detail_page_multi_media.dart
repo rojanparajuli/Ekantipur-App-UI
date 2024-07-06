@@ -62,39 +62,44 @@ class DetailPageMultiMedia extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-                 Stack(
-              alignment: AlignmentDirectional.center,
-              children: [
-                SizedBox(
-                  height: 200,
-                  width: double.infinity,
-                  child: Image.asset(imagePath, fit: BoxFit.fitHeight, ),
-                ),
-            
-                Positioned(
-                  top:10,
-                  left: 1,
-                  child: SizedBox(
+              Stack(
+                alignment: AlignmentDirectional.center,
+                children: [
+                  SizedBox(
+                    height: 200,
+                    width: double.infinity,
+                    child: Image.asset(
+                      imagePath,
+                      fit: BoxFit.fitHeight,
+                    ),
+                  ),
+                  Positioned(
+                    top: 10,
+                    left: 1,
+                    child: SizedBox(
                       height: 50,
-                              width: 50,
-                    child: Container(
-                      padding: const EdgeInsets.all(5),
-                     
-                      child: ClipOval(
-                          child:  Image.asset(
-                                'assets/mainlogokantipur.png',
-                                height: 30,
-                                width: 30,
-                              ),
+                      width: 50,
+                      child: Container(
+                        padding: const EdgeInsets.all(5),
+                        child: ClipOval(
+                          child: Image.asset(
+                            'assets/mainlogokantipur.png',
+                            height: 30,
+                            width: 30,
+                          ),
+                        ),
                       ),
                     ),
                   ),
-                ),
-                Container(
-                  child: Image.asset('assets/youtubeicon.png', height: 50, width: 50,),
-                )
-              ],
-            ),
+                  Container(
+                    child: Image.asset(
+                      'assets/youtubeicon.png',
+                      height: 50,
+                      width: 50,
+                    ),
+                  )
+                ],
+              ),
               const SizedBox(height: 16),
               Container(
                 width: double.infinity,
@@ -129,6 +134,14 @@ class DetailPageMultiMedia extends StatelessWidget {
                     appbartext.value = appbarnepalitext.value;
                   }
                 },
+                style: ButtonStyle(
+                  shape: WidgetStateProperty.all<OutlinedBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(0),
+                      side: BorderSide(color: Colors.blue.shade900),
+                    ),
+                  ),
+                ),
                 child: Obx(() => Text(buttonText.value)),
               ),
               const SizedBox(height: 16),
