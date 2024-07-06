@@ -1,4 +1,5 @@
 import 'package:ekantipur_clone/controller/auth/lopgin_controller.dart';
+import 'package:ekantipur_clone/screen/auth/forget_password.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -289,13 +290,18 @@ class LoginScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.end,
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Text(
-                      'Forgot Password ?',
-                      style: TextStyle(
-                          color: Colors.blue.shade900,
-                          decoration: TextDecoration.underline,
-                          fontSize: 13,
-                          fontWeight: FontWeight.bold),
+                    GestureDetector(
+                      onTap: (){
+                        Get.to(()=>const ForgetPassword());
+                      },
+                      child: Text(
+                        'Forgot Password ?',
+                        style: TextStyle(
+                            color: Colors.blue.shade900,
+                            decoration: TextDecoration.underline,
+                            fontSize: 13,
+                            fontWeight: FontWeight.bold),
+                      ),
                     ),
                   ],
                 ),
