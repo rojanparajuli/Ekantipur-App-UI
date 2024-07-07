@@ -175,14 +175,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             isEnglishSelected ? 'नेपाली' : 'English',
                             style: const TextStyle(fontSize: 13),
                           ),
-                          const SizedBox(width: 15,),
+                          const SizedBox(
+                            width: 15,
+                          ),
                           GestureDetector(
-                            onTap: () {
-                               setState(() {
-                                isEnglishSelected = !isEnglishSelected;
-                              });
-                            },
-                            child: const Icon(Icons.arrow_right))
+                              onTap: () {
+                                setState(() {
+                                  isEnglishSelected = !isEnglishSelected;
+                                });
+                              },
+                              child: const Icon(Icons.arrow_right))
                         ],
                       ),
                     )),
