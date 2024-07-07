@@ -1,6 +1,6 @@
 import 'package:ekantipur_clone/controller/dashboard_controller.dart';
-import 'package:ekantipur_clone/screen/drawer/drawer.dart';
 import 'package:ekantipur_clone/screen/foryou/for_you_screen.dart';
+import 'package:ekantipur_clone/screen/home/home_screen.dart';
 import 'package:ekantipur_clone/screen/latest/latest_screen.dart';
 import 'package:ekantipur_clone/screen/multimedia/multi_medial_screen.dart';
 import 'package:ekantipur_clone/screen/shorts/shorts_screen.dart';
@@ -13,7 +13,7 @@ class Dashboard extends StatelessWidget {
   Dashboard({super.key});
 
   static  final List<Widget> _widgetOptions = <Widget>[
-    const Text('Home Page Content'),
+    HomeScreen(),
     ForYouScreen(),
     ShortsScreen(),
    LatestNewsScreen(),
@@ -23,35 +23,7 @@ class Dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Builder(
-              builder: (context) => IconButton(
-                icon: const Icon(Icons.menu),
-                onPressed: () => Scaffold.of(context).openDrawer(),
-              ),
-            ),
-            Image.asset(
-              'assets/kantipurnepalilog.png',
-              height: 40,
-            ),
-            CircleAvatar(
-              backgroundColor: Colors.grey[500],
-              child: Icon(
-                Icons.person_2_rounded,
-                color: Colors.blue[800],
-                size: 30,
-              ),
-            ),
-          ],
-        ),
-        automaticallyImplyLeading: false,
-      ),
-      drawer: const Drawer(
-        child: Drawerlists(),
-      ),
+     
       body: Obx(() => Center(
         child: _widgetOptions.elementAt(controller.selectedIndex.value),
       )),

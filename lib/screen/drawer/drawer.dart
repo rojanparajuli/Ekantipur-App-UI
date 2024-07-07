@@ -6,24 +6,26 @@ class Drawerlists extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-          
-            ListTile(
-              leading: const Icon(Icons.home),
-              title: const Text('Home'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.settings),
-              title: const Text('Settings'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-          ],
-        );
+      padding: EdgeInsets.zero,
+      children: <Widget>[
+        const SizedBox(
+          height: kToolbarHeight, 
+        ),
+        ListTile(
+          leading: const Icon(Icons.home),
+          title: const Text('Home'),
+          onTap: () {
+            Navigator.pop(context);
+          },
+        ),
+        ListTile(
+          leading: const Icon(Icons.settings),
+          title: const Text('Settings'),
+          onTap: () {
+            Navigator.pop(context);
+          },
+        ),
+      ],
+    );
   }
 }
