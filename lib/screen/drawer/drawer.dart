@@ -1,31 +1,41 @@
 import 'package:flutter/material.dart';
 
-class Drawerlists extends StatelessWidget {
-  const Drawerlists({super.key});
+class CustomDrawer extends StatelessWidget {
+  const CustomDrawer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      padding: EdgeInsets.zero,
-      children: <Widget>[
-        const SizedBox(
-          height: kToolbarHeight, 
-        ),
-        ListTile(
-          leading: const Icon(Icons.home),
-          title: const Text('Home'),
-          onTap: () {
-            Navigator.pop(context);
-          },
-        ),
-        ListTile(
-          leading: const Icon(Icons.settings),
-          title: const Text('Settings'),
-          onTap: () {
-            Navigator.pop(context);
-          },
-        ),
-      ],
+    return Drawer(
+      child: ListView(
+        padding: EdgeInsets.zero,
+        children: <Widget>[
+          const DrawerHeader(
+            decoration: BoxDecoration(
+              
+              color: Colors.blue,
+            ),
+            child: Text(
+              'Drawer Header',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 24,
+              ),
+            ),
+          ),
+          ListTile(
+            title: const Text('Item 1'),
+            onTap: () {
+              // Implement drawer item tap logic
+            },
+          ),
+          ListTile(
+            title: const Text('Item 2'),
+            onTap: () {
+            },
+          ),
+          // Add more ListTile widgets for additional items
+        ],
+      ),
     );
   }
 }
