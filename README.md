@@ -4,14 +4,14 @@ Ekantipur Clone
 Welcome to the Ekantipur Clone Flutter project! This project replicates the functionalities and design of the Ekantipur news app.
 
 
-![Image]('assets/readme1.jpg'),
-![Image]('assets/readme2.jpg'),
-![Image]('assets/readme3.jpg'),
-![Image]('assets/readme4.jpg'),
-![Image]('assets/readme5.jpg'),
-![Image]('assets/readme6.jpg'),
-![Image]('assets/readme7.jpg'),
-![Image]('assets/readme8.jpg'),
+![Image](assets/readme1.jpg),
+![Image](assets/readme2.jpg),
+![Image](assets/readme3.jpg),
+![Image](assets/readme4.jpg),
+![Image](assets/readme5.jpg),
+![Image](assets/readme6.jpg),
+![Image](assets/readme7.jpg),
+![Image](assets/readme8.jpg),
 
 
 
