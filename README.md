@@ -1,16 +1,49 @@
-# ekantipur_clone
+# Ekantipur Clone
 
-A new Flutter project.
+Ekantipur Clone
+Welcome to the Ekantipur Clone Flutter project! This project replicates the functionalities and design of the Ekantipur news app.
+
+
+![Alt text]('assets/readme1.jpg'),
+![Alt text]('assets/readme2.jpg'),
+![Alt text]('assets/readme3.jpg'),
+![Alt text]('assets/readme4.jpg'),
+![Alt text]('assets/readme5.jpg'),
+![Alt text]('assets/readme6.jpg'),
+![Alt text]('assets/readme7.jpg'),
+![Alt text]('assets/readme8.jpg'),
+
+
+
+
+
+
+
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This guide will help you set up and run your Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+
+Resources for Beginners
+If this is your first time working with Flutter, here are some resources to get you started:
+
 
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook),
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# How to Run
+To run this application, follow these steps:
+
+1. Clone the repository:
+[online documentation](git clone https://github.com/yourusername/ekantipur_clone.git), cd ekantipur_clone,
+
+# Features
+1. You can simply copy my code for your app ui.
+
+# License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+# Contact
+If you have any questions or suggestions, feel free to open an issue or contact us at rojanparajuli13@example.com.
+
