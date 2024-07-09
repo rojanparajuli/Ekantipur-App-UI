@@ -283,7 +283,7 @@ class HomeScreenState extends State<HomeScreen> {
                   AllNewsScreen(),
                   AllNewsScreen(),
                 ]),
-              )
+              ),
             ],
           ),
         ),
