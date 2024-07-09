@@ -37,6 +37,14 @@ class AllNewsScreen extends StatelessWidget {
     'देशको राज्य कोषको अपेक्षा कमी छ',
     'केहि भन्न सकिँदैन',
   ];
+
+  final List<Map<String, String>> imageList = [
+    {'image': 'assets/bottom1.jpg', 'title': 'उर्लियो नारायणी नदी'},
+    {'image': 'assets/bottom2.jpg', 'title': 'काठमाडौं उपत्यका'},
+    {'image': 'assets/bottom3.jpg', 'title': 'पोखरा ताल'},
+    {'image': 'assets/bottom4.jpg', 'title': 'लुम्बिनी'},
+    {'image': 'assets/bottom5.jpg', 'title': 'चितवन'},
+  ];
   AllNewsScreen({super.key});
 
   @override
@@ -390,8 +398,10 @@ class AllNewsScreen extends StatelessWidget {
               },
             ),
           ),
-          const SizedBox(height: 30,),
-             Row(
+          const SizedBox(
+            height: 30,
+          ),
+          Row(
             children: [
               Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -412,7 +422,7 @@ class AllNewsScreen extends StatelessWidget {
               )
             ],
           ),
-            Flexible(
+          Flexible(
             child: ListView.builder(
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
@@ -436,6 +446,85 @@ class AllNewsScreen extends StatelessWidget {
               },
             ),
           ),
+          Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Container(
+                color: Colors.blue.shade800,
+                height: 210,
+                child: Column(
+                  children: [
+                    const Row(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                            'बिचार/बिबिध ',
+                            style: TextStyle(color: Colors.white, fontSize: 16),
+                          ),
+                        ),
+                        Spacer(),
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                            'See all➜',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                              decoration: TextDecoration.underline,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Expanded(
+                      child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: imageList.length,
+                        itemBuilder: (context, index) {
+                          return Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Column(
+                              children: [
+                                Container(
+                                  width: 150,
+                                  height: 150,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(8),
+                                    image: DecorationImage(
+                                      image: AssetImage(
+                                          imageList[index]['image']!),
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  child: Align(
+                                    alignment: Alignment.bottomCenter,
+                                    child: Container(
+                                      color: Colors.black54,
+                                      width: double.infinity,
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Text(
+                                        imageList[index]['title']!,
+                                        style: const TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 14,
+                                        ),
+                                        textAlign: TextAlign.center,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          );
+                        },
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          )
         ],
       )),
     );
@@ -661,17 +750,20 @@ class MultimediaItemforperson extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Row(
+              Row(
                 children: [
-                  CircleAvatar(),
-                  SizedBox(width: 8),
-                  Text('सबिता बिमली '),
+                  CircleAvatar(
+                    child: ClipOval(child: Image.asset('assets/sambhav.jpg')),
+                  ),
+                  const SizedBox(width: 8),
+                  const Text('सम्भब सिरोहिया'),
                 ],
               ),
               Container(
                 height: 35,
                 width: 100,
-                padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
                 decoration: BoxDecoration(
                   color: Colors.grey.shade300,
                   border: Border.all(color: Colors.blue.shade900),
@@ -694,7 +786,7 @@ class MultimediaItemforperson extends StatelessWidget {
               const SizedBox(width: 8),
               Image.asset(
                 imagePath,
-                width: 100, 
+                width: 100,
               ),
             ],
           ),
